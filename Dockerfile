@@ -9,9 +9,6 @@ RUN apt-get update -y && apt-get install -y \
     build-essential \
     curl
 
-# Don't show git messages about non-existent parent branch
-RUN git config --global advice.detachedHead false
-
 RUN mkdir -p /tmp/m4 ${INSTALL_PATH}
 
 WORKDIR /tmp/m4
